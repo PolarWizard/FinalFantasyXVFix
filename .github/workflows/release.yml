@@ -6,6 +6,9 @@ on:
       - 'v*'   # Trigger on version tags like v1.0.0
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: windows-latest
@@ -40,7 +43,7 @@ jobs:
           # Download ASI Loader and extract DLL into package
           $type = "x64"
           $file = "d3d11"
-          $asi = $file-$type.zip
+          $asi = "$file-$type.zip"
           $url = "https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/$type-latest/$file-$type.zip"
           Invoke-WebRequest -Uri $url -OutFile $asi
           Add-Type -AssemblyName System.IO.Compression.FileSystem
