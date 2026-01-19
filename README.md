@@ -12,11 +12,11 @@
 1. Build and install:
 ```ps1
 git clone https://github.com/PolarWizard/FinalFantasyXVFix.git
-cd FinalFantasyXVFix; mkdir build; cd build
+cd FinalFantasyXVFix
 # If install is not needed you may omit -DCMAKE_INSTALL_PREFIX and cmake install step.
-cmake -DCMAKE_INSTALL_PREFIX=<FULL-PATH-TO-GAME-FOLDER> ..
-cmake --build . --config Release
-cmake --install .
+cmake -B build -DCMAKE_INSTALL_PREFIX=<FULL-PATH-TO-GAME-FOLDER>
+cmake --build build --config Release
+cmake --install build
 ```
 2. Download [d3d11.dll](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases) Win64 version
 3. Extract to game folder: `FINAL FANTASY XV`
