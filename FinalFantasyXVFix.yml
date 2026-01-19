@@ -1,0 +1,16 @@
+name: Final Fantasy XV Fix
+
+# Enables or disables this mod.
+masterEnable: true
+
+# Available features.
+features:
+
+  # Constrains and centers the HUD to 16:9.
+  hud:
+    enable: false
+
+  # Uncaps the FPS if value is 0, else sets the new FPS cap to value.
+  fps:
+    enable: false
+    value: 0

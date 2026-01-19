@@ -1,0 +1,3 @@
+### Ignore directories
+# CMake build artifacts
+build/
